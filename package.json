@@ -5,10 +5,17 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:ui": "vue-cli-service build --target lib --cjui cj-ui package/cj-ui/index.js",
     "lint": "vue-cli-service lint"
   },
+  "workspaces": [
+    "package/*"
+  ],
   "dependencies": {
     "core-js": "^3.8.3",
+    "element-ui": "^2.15.14",
+    "sass": "^1.74.1",
+    "sass-loader": "^14.1.1",
     "vue": "^2.6.14"
   },
   "devDependencies": {
@@ -31,7 +38,8 @@
       "eslint:recommended"
     ],
     "parserOptions": {
-      "parser": "@babel/eslint-parser"
+      "parser": "@babel/eslint-parser",
+      "requireConfigFile": false
     },
     "rules": {}
   },
